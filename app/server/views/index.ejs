@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicious Bites Restaurant</title>
+    <title>QuickRail - Train Ticket Booking</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
             color: #333;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #007bff; /* Blue color */
+            background-color: #4CAF50;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -23,11 +23,11 @@
 
         h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 2.5em;
         }
 
         nav {
-            background-color: #343a40;
+            background-color: #333;
             padding: 10px 0;
             text-align: center;
         }
@@ -46,29 +46,49 @@
         }
 
         h2 {
-            color: #ff6347;
+            color: #4CAF50;
         }
 
-        .menu-section {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
-
-        .menu-item {
-            background-color: #f1f1f1;
-            padding: 15px;
+        .booking-form {
+            background-color: white;
+            padding: 20px;
             border-radius: 8px;
-            width: 30%;
-            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .menu-item h3 {
-            margin-top: 0;
+        .booking-form label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .booking-form input,
+        .booking-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .booking-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.2em;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .booking-form button:hover {
+            background-color: #45a049;
         }
 
         .contact {
-            background-color: #343a40;
+            background-color: #333;
             color: white;
             padding: 20px;
             text-align: center;
@@ -80,7 +100,7 @@
         }
 
         footer {
-            background-color: #ff6347;
+            background-color: #4CAF50;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -92,47 +112,55 @@
 <body>
 
     <header>
-        <h1>Delicious Bites Restaurant</h1>
+        <h1>QuickRail - Book Your Train Tickets</h1>
     </header>
 
     <nav>
         <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
+        <a href="#book">Book a Ticket</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <div class="content" id="home">
-        <h2>Welcome to Delicious Bites</h2>
-        <p>Experience the best dining in town with our fresh ingredients and unique flavors. We pride ourselves on providing an unforgettable culinary experience.</p>
+        <h2>Welcome to QuickRail</h2>
+        <p>QuickRail is your one-stop solution for booking train tickets with ease and convenience. Our platform allows you to search, select, and book your journey in just a few clicks.</p>
     </div>
 
-    <div class="content" id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-section">
-            <div class="menu-item">
-                <h3>Appetizers</h3>
-                <p>Start your meal with our delicious appetizers, from crispy calamari to fresh bruschetta.</p>
-            </div>
-            <div class="menu-item">
-                <h3>Main Course</h3>
-                <p>Enjoy our chef's special entrees, including grilled salmon, steak, and vegetarian options.</p>
-            </div>
-            <div class="menu-item">
-                <h3>Desserts</h3>
-                <p>Indulge in our decadent desserts, from chocolate lava cake to classic tiramisu.</p>
-            </div>
+    <div class="content" id="book">
+        <h2>Book Your Ticket</h2>
+        <div class="booking-form">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" placeholder="Enter departure city">
+
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" placeholder="Enter destination city">
+
+            <label for="date">Date of Journey:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="class">Class:</label>
+            <select id="class" name="class">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select>
+
+            <label for="passengers">Number of Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" value="1">
+
+            <button type="submit">Search Trains</button>
         </div>
     </div>
 
     <div class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>1234 Foodie St, Gourmet City, FL 12345</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: contact@deliciousbites.com</p>
+        <p>For any queries or assistance, please contact us:</p>
+        <p>Phone: 1-800-QUICKRAIL</p>
+        <p>Email: support@quickrail.com</p>
     </div>
 
     <footer>
-        <p>&copy; 2024 Delicious Bites Restaurant. All rights reserved.</p>
+        <p>&copy; 2024 QuickRail. All rights reserved.</p>
     </footer>
 
 </body>
